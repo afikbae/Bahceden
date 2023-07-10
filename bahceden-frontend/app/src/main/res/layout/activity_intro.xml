@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IntroActivity">
+
+    <TextView
+        android:id="@+id/introWelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/the_bold_font"
+        android:paddingStart="16dp"
+        android:text="Welcome to Bahçeden"
+        android:textColor="@color/bahceden_green"
+        android:textSize="46sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/introImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introWelcomeText"
+        app:srcCompat="@drawable/gardening" />
+
+    <TextView
+        android:id="@+id/introSelectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Select to Continue"
+        android:textColor="@color/bahceden_green"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introImageView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/introCustomerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/intro_button_background"
+        android:drawableTop="@mipmap/customer_png_foreground"
+        android:fontFamily="@font/nexa_heavy"
+        android:paddingTop="6dp"
+        android:text="@string/customer"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/introProducerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introSelectText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/introProducerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/intro_button_background"
+        android:drawableTop="@mipmap/farmer_png_foreground"
+        android:fontFamily="@font/nexa_heavy"
+        android:paddingTop="6dp"
+        android:text="@string/producer"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/introCustomerButton" />
+
+    <TextView
+        android:id="@+id/introAlreadyHaveAnAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="@string/already_have_an_account"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introCustomerButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/bahceden_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bahceden"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.ProducerAllProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CategoryItemsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProducerOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProducerEditProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProducerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SecurityProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerAddCardActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.CustomerCardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerAddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerAddressesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerAnalyticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerCheckOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProducerAnalyticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerViewProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerViewProducerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProducerEditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CustomerEditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.LogInActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

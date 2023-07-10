@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/spinnerItemIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_dairy_products" />
+
+    <TextView
+        android:id="@+id/spinnerItemText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:padding="10dp"
+        android:text="Dairy"
+        android:textColor="@color/bahceden_green"
+        android:textSize="20sp" />
+
+</LinearLayout>

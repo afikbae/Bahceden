@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/producerOrderDetailsProductImage"
+        android:layout_width="158dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/milk" />
+
+
+    <TextView
+        android:id="@+id/producerOrderDetailsProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Keci Sutu"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsProductImage" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsProductID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="#71261"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/producerOrderDetailsProductName"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsProductImage" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsOrderDeliveryInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Date of Purchase - Type of Delivery"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsProductName" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsOrderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="10/10/2023, 20.14"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsOrderDeliveryInfoText" />
+
+
+    <TextView
+        android:id="@+id/producerOrderDetailsDeliveryType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Shipment"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/detailsDivider"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsOrderDeliveryInfoText" />
+
+    <ImageView
+        android:id="@+id/detailsDivider"
+        android:layout_width="2dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/producerOrderDetailsOrderDate"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsOrderDeliveryInfoText"
+        app:srcCompat="@drawable/divider" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsAmountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Purchased Amount"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsOrderDate" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="5 L"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsAmountTitle" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerDetailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Customer Details"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsAmountValue" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Name: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerDetailText" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Emir Ensar Sevil"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/producerOrderDetailsCustomerNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerDetailText" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerPhoneNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="+905853677564"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/producerOrderDetailsCustomerPhoneNumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerDetailText" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerPhoneNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Phone Number: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerNameLabel" />
+
+    <ImageView
+        android:id="@+id/producerOrderDetailsBackButton"
+        android:layout_width="28dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/producerOrderDetailsProductImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cross" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Adress: "
+        android:textSize="15dp"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerPhoneNumberLabel" />
+
+    <TextView
+        android:id="@+id/producerOrderDetailsCustomerAddressValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="15sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="@string/loremIpsum"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/producerOrderDetailsCustomerAddressLabel"
+        app:layout_constraintTop_toBottomOf="@+id/producerOrderDetailsCustomerAddressLabel"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

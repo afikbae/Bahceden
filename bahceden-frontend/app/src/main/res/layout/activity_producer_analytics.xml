@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".activities.ProducerAnalyticsActivity">
+
+    <LinearLayout
+        android:id="@+id/producerAnalyticsTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:background="@color/bahceden_foreground"
+        android:orientation="horizontal"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/producerAnalyticsBackButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/producerAnalyticsTopBarNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_heavy"
+            android:gravity="center"
+            android:text="Analytics"
+            android:textColor="@color/bahceden_green"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pie_chart"
+            app:tint="@color/bahceden_green" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="0.08"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/producerAnalyticsSpinner1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/producerAnalyticsSpinner2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="0.1"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/producerAnalyticsTotalText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="Total : "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/producerAnalyticsAverageText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="Average : "
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="0.3"
+        android:fontFamily="@font/nexa_heavy"
+        android:gravity="center"
+        android:rotation="-45"
+        android:text="Here is a graph \n (earnings or quantity) / day"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Analytics For Products"
+        android:textSize="25sp"
+        android:textColor="@color/black" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/producerAnalyticsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical" />
+
+
+</LinearLayout>

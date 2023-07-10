@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "279233592125",
+    "project_id": "bahceden-bbfd5",
+    "storage_bucket": "bahceden-bbfd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279233592125:android:a98171e1ed9be0c82b2354",
+        "android_client_info": {
+          "package_name": "com.swifties.bahceden"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279233592125-6f9a52hqmubsq1stgtlcc524nvhii0mu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.swifties.bahceden",
+            "certificate_hash": "3d4649e93f39001904a32063fbfa5dd20c9217f1"
+          }
+        },
+        {
+          "client_id": "279233592125-eqo2n6qr4rib9m3hu5li6hrn690fegd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb_5wLyH8xFm5TExjyxLb7p8h9v0b2ctY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279233592125-eqo2n6qr4rib9m3hu5li6hrn690fegd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

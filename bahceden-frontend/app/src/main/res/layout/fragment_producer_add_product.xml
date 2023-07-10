@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProducerAddProductFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/producerAddProductUpdateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/producerEditProductNewItemInfoFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginVertical="12dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:id="@+id/producerAddProductAddImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plus"
+                    app:tint="@color/bahceden_green" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Spinner
+                android:id="@+id/addItemCategoriesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/bg_curved_border" />
+
+            <Spinner
+                android:id="@+id/addItemSubCategoriesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/bg_curved_border" />
+
+            <EditText
+                android:id="@+id/nameOfItemField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="6dp"
+                android:autofillHints="name"
+                android:background="@drawable/edit_text_background"
+                android:hint="Name"
+                android:padding="8dp"
+                android:paddingVertical="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColorHint="@color/darkGray"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/descriptionOfItemField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="6dp"
+                android:autofillHints="name"
+                android:background="@drawable/edit_text_background"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:paddingVertical="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColorHint="@color/darkGray"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/addProductPriceOfItemField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:paddingVertical="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColorHint="@color/darkGray"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/availableAmountOfItemField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="6dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Amount in stock"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:paddingVertical="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColorHint="@color/darkGray"
+                    android:layout_weight="4"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/addProductUnitTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_curved_border" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/producerAddProductUpdateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/long_button_background"
+        android:backgroundTint="@color/bahceden_green"
+        android:fontFamily="@font/nexa_heavy"
+        android:paddingVertical="8dp"
+        android:text="Add Item"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

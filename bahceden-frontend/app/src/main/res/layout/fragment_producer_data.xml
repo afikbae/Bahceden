@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProducerDataFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <Spinner
+                android:id="@+id/producerDataCategoriesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_curved_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/producerDataSubCategoriesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_curved_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/producerDataCategoriesSpinner" />
+
+            <LinearLayout
+                android:id="@+id/producerDataMarketAverageHolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/long_button_background"
+                android:backgroundTint="@color/gray"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/producerDataSubCategoriesSpinner">
+
+                <TextView
+                    android:id="@+id/producerDataMarketAverageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:text="Market Prices"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/producerDataMarketMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$5"
+                        android:textColor="@color/minus_red"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/producerDataMarketAverage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$10"
+                        android:textColor="@color/darkGray"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/producerDataMarketMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$23"
+                        android:textColor="@color/plus_green"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/producerDataOtherSellersAverageHolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/long_button_background"
+                android:backgroundTint="@color/gray"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/producerDataMarketAverageHolder">
+
+                <TextView
+                    android:id="@+id/producerDataOtherAverageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:text="Other Sellers"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/producerDataOtherMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$5"
+                        android:textColor="@color/minus_red"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/producerDataOtherAverage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$10"
+                        android:textColor="@color/darkGray"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/producerDataOtherMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$23"
+                        android:textColor="@color/plus_green"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/producerDataOurRecommendationHolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/long_button_background"
+                android:backgroundTint="@color/gray"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/producerDataOtherSellersAverageHolder">
+
+                <TextView
+                    android:id="@+id/producerDataOurRecommendationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:text="Our Recommendation"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/producerDataOurRecommendationValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:text="$10"
+                    android:textColor="@color/bahceden_green"
+                    android:textSize="26sp" />
+
+            </LinearLayout>
+
+<!--            <com.github.mikephil.charting.charts.PieChart-->
+<!--                android:id="@+id/producerDataChart"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/producerDataOurRecommendationHolder" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

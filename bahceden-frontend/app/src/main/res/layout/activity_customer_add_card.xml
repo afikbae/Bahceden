@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CustomerAddAddressActivity">
+
+    <LinearLayout
+        android:id="@+id/customerAddCardTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bahceden_foreground"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/customerAddCardBackButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/editProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="Add Card"
+            android:textColor="@color/bahceden_green"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerAddCardTopBar">
+
+        <EditText
+            android:id="@+id/customerAddCardEditTitleOfCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Title"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/darkGray" />
+
+        <EditText
+            android:id="@+id/customerAddCardEditNameOfCardHolder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/name_of_the_card_holder"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColorHint="@color/darkGray" />
+
+        <EditText
+            android:id="@+id/customerAddCardEditCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="start"
+            android:hint="@string/card_number"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColorHint="@color/darkGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/customerAddCardEditCVV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="@string/cvv"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColorHint="@color/darkGray" />
+
+
+                <EditText
+                    android:id="@+id/customerAddCardEditExpirationDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="@string/expiration_date"
+                    android:inputType="date"
+                    android:padding="12dp"
+                    android:textColorHint="@color/darkGray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/customerAddCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/long_button_background"
+        android:fontFamily="@font/nexa_heavy"
+        android:paddingHorizontal="16dp"
+        android:text="Add Card"
+        android:textSize="15sp"
+        app:backgroundTint="@color/bahceden_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

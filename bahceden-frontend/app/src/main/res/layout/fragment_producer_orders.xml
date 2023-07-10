@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    tools:context=".fragments.ProducerOrdersFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutProducerOrdersTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_curved_border"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Pending"
+                android:textAlignment="center"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/producerOrdersPendingCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/orange" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_curved_border"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Ongoing"
+                android:textAlignment="center"
+                android:textColor="@color/eggplant_pink" />
+
+            <TextView
+                android:id="@+id/producerOrdersOngoingCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/eggplant_pink" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_curved_border"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Delivered"
+                android:textAlignment="center"
+                android:textColor="@color/plus_green" />
+
+            <TextView
+                android:id="@+id/producerOrdersDeliveredCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/plus_green" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_curved_border"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Cancelled"
+                android:textAlignment="center"
+                android:textColor="@color/minus_red" />
+
+            <TextView
+                android:id="@+id/producerOrdersCancelledCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/nexa_heavy"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/minus_red" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/producerOrdersRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutProducerOrdersTopBar"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

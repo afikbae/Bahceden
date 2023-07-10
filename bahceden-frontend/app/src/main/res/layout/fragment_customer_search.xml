@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CustomerSearchFragment">
+
+    <LinearLayout
+        android:id="@+id/customerSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/customerSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:fontFamily="@font/nexa_heavy"
+            android:hint="@string/search"
+            android:paddingStart="8dp"
+            android:textColorHint="@color/darkGray" />
+
+        <ListView
+            android:id="@+id/customerSearchHistoryListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/customerSearchFilterButtons"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/customerSearchResultsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerSearchBar">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customerSearchFiltersButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/long_button_background"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="@string/filters" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customerSearchSortByButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/long_button_background"
+            android:backgroundTint="@color/bahceden_foreground"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="@string/sort_by" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filtersMenu"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@id/customerSearchFilterButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="@color/bahceden_foreground"
+        android:padding="8dp"
+        android:elevation="1dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingHorizontal="4dp">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/producerSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Producer"
+                android:fontFamily="@font/nexa_heavy"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/productSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Product"
+                android:fontFamily="@font/nexa_heavy"
+                android:layout_weight="1"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/searchCategoriesSpinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_curved_border"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sortByMenu"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/customerSearchFilterButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="@color/bahceden_foreground"
+        android:padding="8dp"
+        android:elevation="1dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingHorizontal="4dp">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+
+               <RadioButton
+                   android:id="@+id/priceSortSwitch"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sort By Price"
+                   android:fontFamily="@font/nexa_heavy"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/ratingSortSwitch"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:checked="true"/>
+
+               <RadioButton
+                   android:id="@+id/ratingSortSwitch"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginEnd="44dp"
+                    android:fontFamily="@font/nexa_heavy"
+                   android:text="Sort By Rating"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="0.0" />
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/ascendingSortSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Ascending/Descending"
+                android:fontFamily="@font/nexa_heavy"
+                android:layout_weight="1"
+                android:checked="true" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/customerSearchResultsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Search Results"
+        android:textColor="@color/bahceden_green"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerSearchFilterButtons" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/customerSearchResultsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerSearchResultsText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/customerSearchImg"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/customerSearchBar"
+        app:layout_constraintTop_toTopOf="@+id/customerSearchBar"
+        app:srcCompat="@drawable/ic_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

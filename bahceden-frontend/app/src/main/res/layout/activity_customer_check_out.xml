@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CustomerCheckOutActivity">
+
+    <LinearLayout
+        android:id="@+id/customerCheckOutTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bahceden_foreground"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/customerCheckOutBackButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/customerCheckOutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="Check Out"
+            android:textColor="@color/bahceden_green"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/customerCheckOutContinueToPaymentBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerCheckOutTopBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/customerCheckOutAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Shipping Address"
+                android:textColor="@color/bahceden_green"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/customerCheckOutAddressHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/long_button_background"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutAddressTitle">
+
+                <ImageView
+                    android:id="@+id/customerCheckOutAddressLogo"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/bt_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/checkoutCustomerAddressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="-8dp"
+                    android:text="Cennet"
+                    android:textColor="@color/bahceden_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/customerCheckOutAddressLogo"
+                    app:layout_constraintTop_toTopOf="@id/customerCheckOutAddressLogo" />
+
+                <TextView
+                    android:id="@+id/customerCheckOutAddressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Sıratı geçtikten sonra cehennemin 7 kat üstü. Israfile sorsanız gösterir."
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/checkoutAddressChangeAddress"
+                    app:layout_constraintStart_toStartOf="@id/checkoutCustomerAddressTitle"
+                    app:layout_constraintTop_toBottomOf="@id/checkoutCustomerAddressTitle" />
+
+                <ImageView
+                    android:id="@+id/checkoutAddressChangeAddress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/customerCheckOutAddressLogo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/customerCheckOutHorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="12dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutAddressHolder" />
+
+            <TextView
+                android:id="@+id/customerCheckOutOrdersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Order List"
+                android:textColor="@color/bahceden_green"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutHorizontalDivider" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/customerCheckOutOrdersRVHolder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutOrdersTitle">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/customerCheckOutOrdersRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:id="@+id/customerCheckOutHorizontalDivider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="12dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutOrdersRVHolder" />
+
+            <TextView
+                android:id="@+id/customerCheckOutShippingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="@string/shipping"
+                android:textColor="@color/bahceden_green"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutHorizontalDivider2" />
+
+            <RadioGroup
+                android:id="@+id/checkOutShippingRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customerCheckOutShippingTitle">
+
+                <RadioButton
+                    android:id="@+id/customerCheckOutProducerDeliveryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:buttonTint="@color/bahceden_green"
+                    android:drawableEnd="@drawable/ic_truck"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/bahceden_green"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:layoutDirection="rtl"
+                    android:text="Producer Delivery" />
+
+                <RadioButton
+                    android:id="@+id/customerCheckOutCustomerPickupButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:buttonTint="@color/bahceden_green"
+                    android:drawableEnd="@drawable/ic_pickup"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/bahceden_green"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:layoutDirection="rtl"
+                    android:text="Customer Pickup" />
+
+                <RadioButton
+                    android:id="@+id/customerCheckOutShipmentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:buttonTint="@color/bahceden_green"
+                    android:drawableEnd="@drawable/ic_cargo"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/bahceden_green"
+                    android:fontFamily="@font/nexa_heavy"
+                    android:layoutDirection="rtl"
+                    android:text="Shipment" />
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/customerCheckOutHorizontalDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="12dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/checkOutShippingRadioGroup" />
+
+            <LinearLayout
+                android:id="@+id/customerCheckOutFinalPriceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/long_button_background"
+                android:backgroundTint="@color/white"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customerCheckOutHorizontalDivider3">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customerCheckOutCostTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="Amount"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="22sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/customerCheckOutCostValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$333"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customerCheckOutShippingCostTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="Shipping"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="22sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/customerCheckOutShippingCostValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$50"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customerCheckOutDiscountTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="Discount"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="22sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/customerCheckOutDiscountValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="-$133"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/customerCheckOutHorizontalDivider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@id/customerCheckOutOrdersRV" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="Total"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="22sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/finalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexa_heavy"
+                        android:text="$250"
+                        android:textColor="@color/bahceden_green"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/customerCheckOutContinueToPaymentBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customerCheckOutContinueToPaymentButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/long_button_background"
+            android:backgroundTint="@color/bahceden_green"
+            android:fontFamily="@font/nexa_heavy"
+            android:paddingHorizontal="56dp"
+            android:paddingVertical="8dp"
+            android:text="Continue to Payment"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

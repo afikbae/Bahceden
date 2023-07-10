@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/long_button_background"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartProductImageHolder"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cartProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/jam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/analyticsProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Cherry Jam"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/cartProductImageHolder"
+        app:layout_constraintTop_toTopOf="@id/cartProductImageHolder" />
+
+    <TextView
+        android:id="@+id/analyticsProductId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#007251"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/analyticsProductName" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Samsun"
+        android:textColor="@color/darkGray"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/analyticsProductName"
+        app:layout_constraintTop_toBottomOf="@id/analyticsProductName" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="20dp"
+        android:layout_margin="6dp"
+        android:background="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="@id/city"
+        app:layout_constraintStart_toEndOf="@id/city"
+        app:layout_constraintTop_toTopOf="@id/city" />
+
+    <TextView
+        android:id="@+id/amountSoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Amount Sold : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/cartProductImageHolder"
+        app:layout_constraintStart_toEndOf="@id/cartProductImageHolder" />
+
+    <TextView
+        android:id="@+id/amountSoldValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="255"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/cartProductImageHolder"
+        app:layout_constraintStart_toEndOf="@id/amountSoldText" />
+
+    <TextView
+        android:id="@+id/earningsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="Earnings : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/amountSoldText"
+        app:layout_constraintStart_toEndOf="@id/cartProductImageHolder" />
+
+    <TextView
+        android:id="@+id/earningsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/nexa_heavy"
+        android:text="1500$"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/earningsText"
+        app:layout_constraintStart_toEndOf="@id/earningsText" />
+
+    <TextView
+        android:id="@+id/producerAnalyticsAmountLeftInStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="15 KG"
+        android:textColor="@color/darkGray"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/analyticsProductName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

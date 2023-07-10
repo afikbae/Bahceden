@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashBahcedenLogo"
+        android:layout_width="240dp"
+        android:layout_height="268dp"
+        app:layout_constraintBottom_toTopOf="@id/splashBySwifties"
+        app:layout_constraintEnd_toEndOf="@+id/bahcedenSplashText"
+        app:layout_constraintStart_toStartOf="@+id/bahcedenSplashText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bahceden_logo" />
+
+    <TextView
+        android:id="@+id/splashBySwifties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/by_swifties"
+        android:textColor="@color/bahceden_green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splashBahcedenLogo" />
+
+    <TextView
+        android:id="@+id/bahcedenSplashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/the_bold_font"
+        android:text="BAHÇEDEN"
+        android:textColor="@color/bahceden_green"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashBahcedenLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

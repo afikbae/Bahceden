@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CustomerAnalyticsActivity">
+
+    <LinearLayout
+        android:id="@+id/customerAnalyticsTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bahceden_foreground"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/customerAnalyticsBackButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/customerAnalyticsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="Analytics"
+            android:textColor="@color/bahceden_green"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/customerAnalyticsBenefitExpenseHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerAnalyticsTopBar">
+
+        <LinearLayout
+            android:id="@+id/customerAnalyticsBenefitHolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/long_button_background"
+            android:backgroundTint="@color/gray"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/customerAnalyticsBenefitTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Benefit"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/customerAnalyticsBenefitValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="$10"
+                android:textColor="@color/plus_green"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customerAnalyticsCostsHolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/long_button_background"
+            android:backgroundTint="@color/gray"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/customerAnalyticsCostsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Costs"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/customerAnalyticsCostsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="$250"
+                android:textColor="@color/minus_red"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalCostText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/customerAnalyticsBenefitExpenseHolder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/nexa_heavy"
+        android:layout_margin="8dp"
+        android:text="@string/analytics_text"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/customerAnalyticsConsumerChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalCostText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
