@@ -1,3 +1,8 @@
+# Bahceden App
+
+Bahçeden is an Android e-commerce application designed to create a direct link between small farmers and local consumers in Turkey. By bypassing the intermediaries, Bahçeden empowers local farmers, enabling them to showcase their products and reach a wider audience, while allowing consumers to access fresh, locally sourced products at competitive prices.
+
+
 # Bahceden App Setup Guide
 Welcome to the Bahceden application setup guide! This guide will walk you through how to get your local development environment set up.
 
