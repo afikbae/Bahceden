@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="bahceden_logo.svg" alt="Project Logo" width="200" height="200">
+  <img src="bahceden_logo.png" alt="Project Logo" width="200" height="200">
 </p>
 
 ### This repository contains all of the code and reports for the term project of CS102 course I've taken in 22-23 spring semester.
@@ -10,6 +10,13 @@
 * Mehmet Anıl Yeşil - [GitHub](https://github.com/anil-yesil)
 * Şükrü Eren Gökırmak - [GitHub](https://github.com/erengokirmak)
 * Erfan Farhang Kia - [GitHub](https://github.com/erfan-fk)
+
+### Used Techs
+* Android Studio
+* MySql
+* Sqlite
+* Spring Boot
+* Google Firebase
 
 # Bahceden App
 
