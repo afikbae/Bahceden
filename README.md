@@ -11,6 +11,13 @@
 * Şükrü Eren Gökırmak - [GitHub](https://github.com/erengokirmak)
 * Erfan Farhang Kia - [GitHub](https://github.com/erfan-fk)
 
+### Used Techs
+* Android Studio
+* MySql
+* Sqlite
+* Spring Boot
+* Google Firebase
+
 # Bahceden App
 
 Bahçeden is an Android e-commerce application designed to create a direct link between small farmers and local consumers in Turkey. By bypassing the intermediaries, Bahçeden empowers local farmers, enabling them to showcase their products and reach a wider audience, while allowing consumers to access fresh, locally sourced products at competitive prices.
