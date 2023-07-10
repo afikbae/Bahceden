@@ -1,4 +1,11 @@
-### This is the repository for my CS102 term project.
+### This repository contains all of the code and reports for the term project of CS102 course I've taken in 22-23 spring semester.
+
+### Team Members
+* Mehmet Akif Şahin - [GitHub](https://github.com/afikbae)
+* Emir Ensar Sevil  - [GitHub](https://github.com/emirsevil)
+* Mehmet Anıl Yeşil - [GitHub](https://github.com/anil-yesil)
+* Şükrü Eren Gökırmak - [GitHub](https://github.com/erengokirmak)
+* Erfan Farhang Kia - [GitHub](https://github.com/erfan-fk)
 
 # Bahceden App
 
